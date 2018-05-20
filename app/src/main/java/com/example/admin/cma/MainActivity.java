@@ -48,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button button3=(Button)findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,StaffTesting_Main.class);
+                startActivity(intent);
+            }
+        });
+
         // 权限获取
         if(lacksPermissions()) {
             requestPermissions(new String[]{

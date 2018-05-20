@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.admin.cma">
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,30 +27,34 @@
         <activity
             android:name=".StaffFile_Main"
             android:allowBackup="true"
+            android:label="人员档案管理"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"
-            android:label="人员档案管理" />
-        <activity android:name=".StaffFile_Modify"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".StaffFile_Modify"
             android:allowBackup="true"
-            android:parentActivityName=".StaffFile_Main"
-            android:label="查看及编辑人员档案"/>
-        <activity android:name=".StaffFile_Add"
+            android:label="查看及编辑人员档案"
+            android:parentActivityName=".StaffFile_Main" />
+        <activity
+            android:name=".StaffFile_Add"
             android:allowBackup="true"
+            android:label="新增人员档案"
             android:parentActivityName=".StaffFile_Main"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"
-            android:label="新增人员档案"/>
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
         <provider
-            android:authorities="com.example.admin.cma.fileprovider"
             android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.admin.cma.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
 
-
-
+        <activity android:name=".StaffTesting_Main" />
+        <activity android:name=".StaffTesting_Add" />
+        <activity android:name=".StaffTesting_Modify"></activity>
     </application>
 
 </manifest>
